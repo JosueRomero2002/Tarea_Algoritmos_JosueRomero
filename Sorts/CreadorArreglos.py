@@ -1,8 +1,10 @@
 import random
 
+# Generar el arreglo aleatorio
+arregloRandom = [random.randint(1, 9000000000) for _ in range(10000)]
 
-arregloRandom = [random.randint(1, 10000) for _ in range(8)]
+# Escribir el arreglo al archivo con formato de lista
+with open("arregloRandom.txt", "w") as file:
+    file.write(str(arregloRandom))  # Convierte el arreglo a su representación en cadena
 
-
-
-print(arregloRandom)
+print("Array successfully written to arregloRandom.txt")
